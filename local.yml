@@ -3,4 +3,13 @@
 
   tasks:
     - name: print from playbook
-      debug: msg="in spencer-gibb/ansible-osx/local.yml"
+      debug: msg="Installing required applications..."
+
+- include: required/hombrew.yml
+- include: required/cask.yml
+- include: required/java7.yml
+- include: required/intellij-idea-ultimate14.yml
+- include: required/vagrant.yml
+- include: required/virtualbox.yml
+- include: required/postgresql.yml
+- include: required/pgadmin.yml

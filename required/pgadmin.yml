@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install pgadmin
+      mac_pkg: pkg_name=org.pgadmin.pkg.pgadmin pkg_version=1.20.0
+               url=https://ftp.postgresql.org/pub/pgadmin3/release/v1.20.0/osx/pgadmin3-1.20.0.dmg
+               archive_type=dmg archive_path=pgAdmin3.app
+      sudo: yes
+

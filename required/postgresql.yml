@@ -1,0 +1,7 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install postgresql
+      command: brew install postgresql 
+               creates=/usr/local/bin/psql

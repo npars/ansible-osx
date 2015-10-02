@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install intellij idea 14 ultimate
+      mac_pkg: pkg_type=app
+               url=http://download.jetbrains.com/idea/ideaIU-14.1.5.dmg
+               archive_type=dmg archive_path='IntelliJ IDEA 14.app'
+      sudo: yes
+

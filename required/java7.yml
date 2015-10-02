@@ -1,0 +1,11 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install java 7 update 79
+      mac_pkg: pkg_name=com.oracle.jdk7 pkg_version=79
+               url=http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-macosx-x64.dmg
+               curl_opts="-L --cookie oraclelicense=accept-securebackup-cookie"
+               archive_type=dmg archive_path='JDK 7 Update 79.pkg'
+      sudo: yes
+
